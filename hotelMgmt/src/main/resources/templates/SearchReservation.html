@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="col-lg-6">
+    <div class="check-form">
+        <h2>Check Reservation</h2>
+        <form th:action="@{/SearchReserv}" th:object="${ReservationDetailForms}"  method="post" autocomplete="off">
+            <div class="room-selector">
+                <p>Confirmation Number</p>
+                <input required class="form-control"  type="text" th:field="*{CONFIRMNUM}"   name="address" placeholder="11111" />
+
+            </div>
+
+            <button type="submit">Check Reservation <i class="lnr lnr-arrow-right"></i></button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
